@@ -1,0 +1,11 @@
+/* TEAM */
+    Chef: Leonid Knyazev
+    Contact: leonid [at] knyazev.me
+    From: Moscow, Orechovo-Zuevo, Russia
+
+/* SITE */
+    Doctype: HTML5
+    Language: Russian
+    Last update: Tomorrow
+
+/* THANKS */

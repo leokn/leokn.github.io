@@ -1,347 +1,78 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset='utf-8'>
-    <title>Леонид Князев</title>
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <style>
-      /* Global: Reset (begin) */
-      html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-      em, img, strong, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table,
-      caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, 
-      footer, header, content, main, hgroup, menu, nav, section, summary, time, mark, audio, video {
-      	margin: 0;
-      	padding: 0;
-      	border: 0;
-      	outline: 0;
-      	font-size: 100%;
-      	vertical-align: baseline;
-      	background: transparent;
-      }
-      
-      body {
-      	line-height: 1;
-      }
-      
-      h1, h2, h3, h4, h5, h6 {
-      	font-weight: normal;
-      }
-      
-      table, th, td {
-      	border-collapse: collapse;
-      	border-spacing: 0;
-      	border: none;
-      	vertical-align: top;
-      }
-      
-      ol, ul, li {
-      	list-style: none;
-      }
-      
-      img, fieldset {
-      	border: 0;
-      }
-      
-      b {
-      	font-weight: normal;
-      }
-      
-      i {
-      	font-style: normal;
-      }
-      
-      :focus,
-      :active {
-      	outline: none;
-      }
-      /* Global: Reset (end) */
-      
-      /* Global: Defenition (begin) */
-      html, body {
-      	width: 100%;
-      	height: 100%;
-      }
-      
-      body {
-      	font: 0.8rem/1.4 Arial, Helvetica, sans-serif;
-      	
-      	color: #333333;
-      	
-      	background-color: #FFFFFF;
-      	background-position: 0 0;
-      	background-repeat: no-repeat;
-      	background-image: none;
-      
-      	/* Чтобы в FF2- заработал z-index: -1 */
-      	position: relative;
-      }
-      
-      article,aside,details,figcaption,figure,
-      footer,header,content,main,hgroup,menu,nav,section { 
-      	display:block;
-      }
-      
-      nav ul {
-      	list-style:none;
-      }
-      
-      
-      
-      h1, h2, h3, h4 {
-      	margin: 1.75em 0 0.5em 0;
-      	font-family: Georgia, Times, serif;
-      	font-weight: normal;
-      }
-      
-      h1 {
-      	font-size: 2em;
-      	margin-bottom: 1em;
-      }
-      
-      h2 {
-      	font-size: 1.7em;
-      }
-      
-      h3 {
-      	font-size: 1.4em;
-      }
-      
-      h4 {
-      	font-size: 1.1em;
-      }
-      
-      h2:first-child,
-      h3:first-child,
-      h4:first-child {
-      	margin-top: 0;
-      }
-      
-      h1+h2, h1+h3, h1+h4,
-      h2+h3, h2+h4, h3+h4 {
-      	margin-top: 0;
-      }
-      
-      img {
-      	border-width: 0;
-      }
-      
-      ul, ol {
-      	margin: 0 0 1.2em 1.7em;
-      }
-      
-      ul {
-      	list-style-type: none;
-      }
-      
-      li {
-      	margin: 0.5em 0 0.5em 1.5em;
-      }
-      
-      ul>li:before {
-      	content: '\2014\a0';
-      	float: left;
-      	margin-left: -1.25em;
-      }
-      
-      ol>li {
-      	list-style: decimal;
-      }
-      
-      ol li ul,
-      ul li ol,
-      ol li ol,
-      ul li ul {
-      	margin: 0 0 1.2em 0;
-      }
-      
-      table {
-      	position: relative;
-      	margin-bottom: 1.2em;
-      	empty-cells: show;
-      }
-      
-      table th,
-      table td {
-      	padding: 0.5em 1.2em 0.5em 0.3em;
-      	empty-cells: show;
-      }
-      
-      table th {
-      	border-bottom: 1px solid #dddddd;
-      	font-weight: bold;
-      }
-      
-      form {
-      	margin-bottom: 1.2em;
-      }
-      
-      input, select, button, textarea {
-      	font-size: 1em;
-      	font-family: Arial, sans-serif;
-      }
-      
-      input[type=text],
-      input[type=password] {
-      	padding: 3px;
-      	background: transparent;
-      }
-      
-      input, select {
-      	vertical-align:middle;
-      }
-      
-      p {
-      	margin-bottom: 1.2em;
-      }
-      
-      dl {
-      	margin-bottom: 1.2em;
-      }
-      
-      dt {
-      	margin-bottom: 0.3em;
-      }
-      
-      dd {
-      	margin-bottom: 1.2em;
-      }
-      
-      blockquote {
-      	margin-bottom: 1.2em;
-      	margin-left: 3em;
-      	quotes:none;
-      }
-      
-      blockquote:before, blockquote:after,
-      q:before, q:after {
-      	content:'';
-      	content:none;
-      }
-      
-      ins {
-      	background-color: #ff9;
-      	color: #000000;
-      	text-decoration: none;
-      }
-      
-      mark {
-      	background-color:#ff9;
-      	color:#000; 
-      	font-style:italic;
-      	font-weight:bold;
-      }
-      
-      del {
-      	text-decoration: line-through;
-      }
-      
-      abbr[title], dfn[title] {
-      	border-bottom: 1px dotted;
-      	cursor:help;
-      }
-      
-      address {
-      	margin-bottom: 1.2em;
-      	font-style: normal;
-      }
-      /* Global: Defenition (end) */
-      
-      /* Begin: b-link */
-      .b-link,
-      .b-link:link {
-      	position: relative;
-      	text-decoration: underline;
-      	color: #4CBCEA;
-      }
-      
-      /* :visited */
-      .b-link:visited {
-      	color: #B74CB7;
-      }
-      
-      /* :hover */
-      .b-link:hover {
-      	color: #E88181;
-      }
-      /* End: b-link */
-      
-      /* Begin: b-link__text */
-      .b-link__text,
-      .b-link:link .b-link__text {
-      	position: relative;
-      	color: #00A0E2;
-      }
-      
-      /* :visited */
-      .b-link:visited .b-link__text {
-      	color: #990099;
-      }
-      
-      /* :hover */
-      .b-link:hover .b-link__text {
-      	color: #DF4C4C;
-      }
-      /* End: b-link__text */
-      
-      /* Begin: b-body */
-      .b-body {
-      	position: relative;
-      	background-color: #e5e5e5;
-      }
-      /* End: b-body */
-      
-      /* Begin: b-page */
-      .b-page {
-      	position: relative;
-      	min-height: 100%;
-      }
-      /* End: b-page */
-      
-      /* Begin: b-mail-to  */
-      .b-mail-to {
-        margin: -20px 0 0 -125px;
-        padding: 0;
-        
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        
-        font-size: 220%;
-        text-align: center;
-      }
-      /*  End: b-mail-to */
-      
-      /* Begin: i-scripts  */
-      .i-scripts {
-        margin: 0;
-        padding: 0;
-        position: absolute;
-        top: -9999px;
-        left: -9999px;
-      }
-      /* End: i-scripts */
-    </style>
-  </head>
+<html lang="ru">
+	<head>
+			<meta charset="utf-8" />
 
-  <body class="b-body">
-    <div class="b-page">
-      <div class="b-mail-to">
-        <a class="b-link" href="mailto:leonid@knyazev.me">
-          <span class="b-link__text">leonid@knyazev.me</span>
-        </a>
-      </div>
-    </div>
-    
-    <div class="i-scripts">
-      <!-- Yandex.Metrika counter -->
-      <script src="//mc.yandex.ru/metrika/watch.js" type="text/javascript"></script>
-      <script type="text/javascript">
-        try {
-          var yaCounter1385439 = new Ya.Metrika({id:1385439, clickmap:true, trackLinks:true, accurateTrackBounce:true});
-        } catch(e) { }
-      </script>
-      <noscript><div><img src="//mc.yandex.ru/watch/1385439" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-      <!-- /Yandex.Metrika counter -->
-    </div>
-  </body>
+			<title>Леонид Князев</title>
+
+			<meta http-equiv="x-ua-compatible" content="ie=edge" />
+			<meta http-equiv="cleartype" content="on" />
+
+			<meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no" />
+			<meta name="keywords" content="леонид князев, leonid knyazev" />
+			<meta name="description" content="Леонид Князев" />
+
+			<meta property="og:title" content="Леонид Князев" />
+			<meta property="og:description" content="Леонид Князев" />
+			<meta property="og:image" content="https://knyazev.me/media/favicon/favicon-96x96.png" />
+			<meta property="og:url" content="https://knyazev.me" />
+			<meta property="og:type" content="website" />
+			<meta property="og:site_name" content="Леонид Князев" />
+			<meta property="og:locale" content="ru-RU" />
+
+			<meta name="google" content="notranslate" />
+			<meta name="google-site-verification" content="" />
+
+			<meta name="msapplication-config" content="/browserconfig.xml" />
+			<meta name="mobile-web-app-capable" content="yes" />
+			<meta name="theme-color" content="#ffffff" />
+			<meta name="msapplication-navbutton-color" content="#ffffff" />
+			<meta name="apple-mobile-web-app-status-bar-style" content="#ffffff" />
+
+			<meta name="robots" content="index, follow" />
+			<meta name="referrer" content="origin" />
+
+			<link rel="apple-touch-icon" sizes="180x180" href="/media/favicon/apple-touch-icon.png" />
+			<link rel="icon" type="image/png" sizes="32x32" href="/media/favicon/favicon-32x32.png" />
+			<link rel="icon" type="image/png" sizes="16x16" href="/media/favicon/favicon-16x16.png" />
+			<link rel="mask-icon" href="/media/favicon/safari-pinned-tab.svg" color="#5bbad5" />
+			<link rel="shortcut icon" href="/media/favicon/favicon.ico" />
+
+			<link rel="manifest" href="/manifest.json" />
+
+			<link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous" />
+			<link rel="stylesheet" href="/assets/main.css" />
+		</head>
+		<body>
+			<div class="root">
+				<noscript><img src="//mc.yandex.ru/watch/15965119" style="position:absolute; left:-9999px;" alt="" /></noscript>
+				<noscript>For full functionality of this page it is necessary to enable JavaScript.<br />Here are the instructions <a href="http://www.enable-javascript.com" target="_blank">how to enable JavaScript</a> in your web browser.</noscript>
+				<div class="page">
+					<div class="content"></div>
+					<div class="copyright">
+						<p>&copy;&nbsp;1983&ndash;2022 <span title='leonid@knyazev.me'>Леонид&nbsp;Князев</span></p>
+					</div>
+					<div class="social">
+						<a href='https://www.instagram.com/leo.knyazev' target='_blank'>
+							<i class="fab fa-instagram" />
+						</a>
+						<a href='https://vk.com/leokn' target='_blank'>
+							<i class="fab fa-vk" />
+						</a>
+						<a href='https://www.facebook.com/lknyazev' target='_blank'>
+							<i class="fab fa-facebook" />
+						</a>
+						<a href='https://github.com/leokn' target='_blank'>
+							<i class="fab fa-github" />
+						</a>
+						<a href='https://www.artlebedev.ru/n3o' target='_blank'>
+							<i class="fab fa-artlebedev" />
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="scripts">
+				<script src="/assets/static/metrika.js" async="async" defer="defer"></script>
+			</div>
+		</body>
 </html>

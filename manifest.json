@@ -1,0 +1,22 @@
+{
+    "name": "Leonid Knyazev",
+    "short_name": "Knyazev",
+    "description": "Leonid Knyazev Home Page",
+    "start_url": "/",
+    "orientation": "any",
+    "display": "standalone",
+    "theme_color": "#FFFFFF",
+    "background_color": "#FFFFFF",
+    "icons": [
+        {
+            "src": "\/media\/favicon\/android-icon-192x192.png",
+            "sizes": "192x192",
+            "type": "image\/png"
+        },
+        {
+            "src": "\/media\/favicon\/android-icon-512x512.png",
+            "sizes": "512x512",
+            "type": "image\/png"
+        }
+    ]
+}

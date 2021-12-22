@@ -1,0 +1,6 @@
+Host: https://knyazev.me
+
+Sitemap: https://knyazev.me/sitemap.xml
+
+User-Agent: *
+Disallow: /bin

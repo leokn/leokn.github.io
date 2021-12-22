@@ -1,0 +1,167 @@
+/* $ID: root.css, Wed, 21 Feb 2018 17:50:26, Leonid 'n3o' Knyazev $ */
+
+/* Begin: global */
+::selection {
+  color: rgba(250, 250, 250, 1);
+  background-color: rgba(81, 132, 209, 1);
+}
+
+/* html, body */
+html {
+  width: 100%;
+  height: 100%;
+  font-size: 100%;
+  box-sizing: border-box;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  text-rendering: optimizeLegibility;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+  font-family: Roboto, 'Noto Sans', sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.4;
+  color: rgba(33, 33, 33, 1);
+  background-color: rgba(250, 250, 250, 1);
+}
+
+/* no-js message */
+body > .root > noscript {
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+  top: 25%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  z-index: 1000;
+}
+
+/* loading spinner */
+body > .root > .boot {
+  animation: spinner-in 5s ease-in;
+}
+
+body > .root > .boot .spinner,
+body > .root > .boot .spinner > div {
+  position: relative;
+  box-sizing: border-box;
+}
+
+body > .root > .boot .spinner {
+  margin: 0;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  display: block;
+  width: 32px;
+  height: 32px;
+  font-size: 0;
+  color: rgba(81, 132, 209, 1);
+  transform: translate3d(-50%, -50%, 0);
+  z-index: 1000;
+}
+
+body > .root > .boot .spinner > div {
+  float: none;
+  display: inline-block;
+  background-color: transparent;
+  border: 2px solid currentColor;
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+  animation: spinner 2s infinite ease;
+}
+
+body > .root > .boot .spinner > div:after {
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  content: "";
+  background-color: currentColor;
+  animation: spinner-inner 2s infinite ease-in;
+}
+
+/* page scripts */
+body > .scripts {
+  display: none;
+}
+
+/* spinner animations */
+@keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  25% {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+  75% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spinner-in {
+  0% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes spinner-inner {
+  0% {
+    height: 0;
+  }
+  25% {
+    height: 0;
+  }
+  50% {
+    height: 100%;
+  }
+  75% {
+    height: 100%;
+  }
+  100% {
+    height: 0;
+  }
+}
+/* End: global */
